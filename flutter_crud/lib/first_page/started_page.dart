@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_crud/common/color_widget.dart';
 import 'package:flutter_crud/common_widget/round_button.dart';
 
 class TemperatureConverter extends StatefulWidget {
+  const TemperatureConverter({super.key});
+
   
   @override
   _TemperatureConverterState createState() => _TemperatureConverterState();
@@ -57,9 +60,19 @@ double celsiusToKelvin(double celsius) {
               type: RoundButtonType.bgGradient,
             ),
             const SizedBox(height: 20),
-            Text("Fahrenheit: $_fahrenheit"),
-            Text("Reaumur: $_reaumur"),
-            Text("Kelvin: $_kelvin"),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Fahrenheit",style: TextStyle(color: Tcolor.black),),
+                Text("$_fahrenheit", style: TextStyle(color: Tcolor.gray),),
+                SizedBox.fromSize(size: const Size(20, 40),),
+                Text("Reamur",style: TextStyle(color: Tcolor.black),),
+                Text("$_reaumur", style: TextStyle(color: Tcolor.gray),),
+                SizedBox.fromSize(size: const Size(20, 40),),
+                Text("Kelvin",style: TextStyle(color: Tcolor.black),),
+                Text("$_kelvin", style: TextStyle(color: Tcolor.gray),),
+              ],
+            ),
           ],
         ),
       ),

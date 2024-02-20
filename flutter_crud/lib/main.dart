@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Fitness CRUD',
+      title: 'Temperature Converter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Tcolor.secondaryColor1,
